@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+    overflow: hidden;
+
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  
+   
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 85%;
+    height: 100px;
+    z-index: 100;
+}
+header nav .logo{
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+header nav .logo span{
+    color: seagreen;
+}
+
+header nav .links{
+    display: flex;
+    justify-content: space-between;
+   width: 40%;
+   align-items: center;
+   height: 100px;
+   
+   
+}
+header nav .links li a{
+    color: #fff;
+}
+
+header nav .social-links{
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+    z-index: 100;
+   
+}
+
+header nav .links li {
+    position: relative;
+}
+
+header nav .links li::after{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    transition: 0.3s;
+    background-color: seagreen;
+}
+
+header nav .links li:hover::after,
+header nav .links li .avtive::after {
+    width: 100%;
+}
+
+header nav .social-links a{
+    color: #fff;
+}
+
+header nav .social-links a:hover{
+    color: seagreen;
+}
+
+.hero-sec {
+    
+    height: 100vh;
+    background-image: url(./images/images/wlc-bg1.jpg);
+    background-size: cover;
+   
+
+
+    
+}
+
+.hero-sec .container{
+  margin-top: 20px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+ 
+}
+
+.hero-sec .container .text{
+    flex: 1;
+   width: 60%;
+   
+}
+
+.hero-sec .container .text h1{
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: capitalize
+}
+
+.hero-sec .container .text p{
+font-size: 20px;
+color:seagreen;
+width: 550px;
+padding: 20px 0;
+letter-spacing: 2px;
+
+}
+
+.hero-sec .container .text .btn
+{
+    background-color: seagreen;
+    border-radius: 5px;
+    border:1px solid seagreen;
+    padding: 20px 20px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.hero-sec .container .text .btn:hover{
+    background-color: transparent;
+   
+}
+
+
+
+.hero-sec .container .img
+{
+width: 35%;
+position: relative;
+top: 30px;
+right: 10px;
+align-items:center;
+
+}
+
+.hero-sec .container .img img{
+    width: 100%;
+}
+
+
+
+@media (max-width: 980px) {
+    /* Targets screens with a maximum width of 980 pixels */
+
+    header nav .links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        background-color: rgb(246, 235, 235);
+        border-left: 1px solid #fff;
+        width: 400px;
+        height: 100vh;
+        text-align: center;
+    }
+
+    /* Applies styles to the navigation links within the header */
+    
+    header nav .social-links {
+        display: none;
+    }
+
+    /* Hides the social links */
+}
+
+
